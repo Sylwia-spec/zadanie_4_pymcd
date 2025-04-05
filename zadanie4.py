@@ -40,3 +40,29 @@ df_results = pd.DataFrame({
 
 print("\nRanking wykonawców remontu (TOPSIS i SPOTIS):")
 print(df_results.sort_values('TOPSIS Ranking').to_string(index=False))
+
+
+df_results.to_csv('ranking_wyniki.csv', index=False, sep=';', encoding='utf-8-sig')
+print("\nWyniki zostały zapisane do pliku 'ranking_wyniki.csv'")
+
+import matplotlib.pyplot as plt
+
+# --- Wykres porównania rankingów ---
+plt.figure(figsize=(8, 5))
+bar_width = 0.35
+index = np.arange(len(alternatives))
+
+plt.bar(index, topsis_ranking, bar_width, label='TOPSIS', alpha=0.8)
+plt.bar(index + bar_width, spotis_ranking, bar_width, label='SPOTIS', alpha=0.8)
+
+plt.xlabel('Wykonawca')
+plt.ylabel('Miejsce w rankingu (1 = najlepszy)')
+plt.title('Porównanie rankingów TOPSIS i SPOTIS')
+plt.xticks(index + bar_width / 2, alternatives)
+plt.ylim(0.5, len(alternatives) + 0.5)
+plt.gca().invert_yaxis()  # Najlepszy na górze
+
+plt.legend()
+plt.tight_layout()
+plt.savefig("ranking_porownanie.png", dpi=300)
+plt.show()
