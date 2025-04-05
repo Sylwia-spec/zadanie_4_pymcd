@@ -63,4 +63,8 @@ W celu lepszego zobrazowania wyników porównano rankingi TOPSIS i SPOTIS na wyk
 ## 6. Wnioski
 
 - **BudMax** został uznany za najlepszą firmę według metody **TOPSIS**.
-- **Renovita** zajęła 1. miejsce w rankingu **SPOTIS**, mimo wyższej ceny, co może być spowodowane lepszą
+- **Renovita** zajęła 1. miejsce w rankingu **SPOTIS**, mimo wyższej ceny, co może być spowodowane lepszą oceną i gwarancją.
+- **Domar** i **EkipaPlus** mają najniższe pozycje w TOPSIS i SPOTIS odpowiednio.
+- Różnice wynikają z różnych podejść metod: TOPSIS uwzględnia relatywną bliskość do punktów idealnych, SPOTIS odnosi się bezpośrednio do wzorca.
+
+---
